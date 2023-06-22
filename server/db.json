@@ -2,7 +2,7 @@
     "products": [
         {
             "id": 1,
-            "imageUrl": "some url here",
+            "imageUrl": "https://bioritmefestival.org/wp-content/uploads/2017/11/img-test-300x300.png",
             "name": "Product name",
             "count": 4,
             "size": {
@@ -10,6 +10,17 @@
             "height": 200
             },
             "weight": "200g"
+        },
+        {
+            "id": 2,
+            "imageUrl": "https://bioritmefestival.org/wp-content/uploads/2017/11/img-test-300x300.png",
+            "name": "Milk",
+            "count": 10,
+            "size": {
+            "width": 100,
+            "height": 50
+            },
+            "weight": "500g"
         }
     ],
     "comments": [

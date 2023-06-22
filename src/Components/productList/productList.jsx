@@ -1,21 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './productList.scss';
 import StoreContext from '../../StoreContext';
+import Product from './Product/product.jsx';
+
 
 const ProductList = function (){
-    const [productList, setProductList] = useState([]);
-    const GetProducts = async() =>{
-        fetch('http://localhost:3001/products')
-        .then(response => response.json())
-        .then(data =>{
-           setProductList(data);
-        } )
-        
-        
-    }
-    useEffect(()=>{
-       GetProducts();
-    }, []);
     
     return(
        <StoreContext.Consumer>
@@ -23,14 +12,16 @@ const ProductList = function (){
             (store) => {
                
                 let state = store.getState();
-                console.log(state);
+                let products = state.products.products;
+                console.log(products);
                 
                 return(
                     <section className='productList'>
                         <div className="productlist-wrap">
-                            <h2>Product List:</h2>
-                            <div className="products-container">
-
+                            <h2 className='mb-4 text-center'>Product List:</h2>
+                            <div className="products-container d-flex">
+                                
+                                {products.map(product => <Product data={product}/>)}
                             </div>
                         </div>
                 </section>
