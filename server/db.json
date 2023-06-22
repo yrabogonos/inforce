@@ -1,35 +1,67 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "imageUrl": "https://bioritmefestival.org/wp-content/uploads/2017/11/img-test-300x300.png",
-            "name": "Product name",
-            "count": 4,
-            "size": {
-            "width": 200,
-            "height": 200
-            },
-            "weight": "200g"
-        },
-        {
-            "id": 2,
-            "imageUrl": "https://bioritmefestival.org/wp-content/uploads/2017/11/img-test-300x300.png",
-            "name": "Milk",
-            "count": 10,
-            "size": {
-            "width": 100,
-            "height": 50
-            },
-            "weight": "500g"
-        }
-    ],
-    "comments": [
-        {
-            "id": 3,
-            "productId": 1,
-            "description": "some text here",
-            "date": "14:00 22.08.2021"
-        }
-    
-    ]
+  "products": [
+    {
+      "id": 1,
+      "imageUrl": "https://bioritmefestival.org/wp-content/uploads/2017/11/img-test-300x300.png",
+      "name": "Product name",
+      "count": 4,
+      "size": {
+        "width": 200,
+        "height": 200
+      },
+      "Weight": "200g"
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://bioritmefestival.org/wp-content/uploads/2017/11/img-test-300x300.png",
+      "name": "Milk",
+      "count": 10,
+      "size": {
+        "width": 100,
+        "height": 50
+      },
+      "Weight": "500g"
+    },
+    {
+      "imageUrl": "https://bioritmefestival.org/wp-content/uploads/2017/11/img-test-300x300.png",
+      "name": "Product name2",
+      "count": 4,
+      "size": {
+        "width": 200,
+        "height": 200
+      },
+      "Weight": "200g",
+      "id": 3
+    },
+    {
+      "imageUrl": "https://bioritmefestival.org/wp-content/uploads/2017/11/img-test-300x300.png",
+      "name": "Test1",
+      "count": "2",
+      "size": {
+        "width": "4",
+        "height": "2"
+      },
+      "Weight": "4",
+      "id": 4
+    },
+    {
+      "imageUrl": "https://bioritmefestival.org/wp-content/uploads/2017/11/img-test-300x300.png",
+      "name": "Test2",
+      "count": "1",
+      "size": {
+        "width": "1",
+        "height": "1"
+      },
+      "Weight": "1",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 3,
+      "productId": 1,
+      "description": "some text here",
+      "date": "14:00 22.08.2021"
+    }
+  ]
 }

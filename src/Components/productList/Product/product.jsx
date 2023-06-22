@@ -16,7 +16,7 @@ const Product = function (props){
                         <p>Width: {props.data.size.width}cm</p>
                         <p>Height: {props.data.size.height}cm</p>
                     </div>
-                    <p>Weight: {props.data.weight}</p>
+                    <p>Weight: {props.data.Weight}</p>
                 </div>
             </div>
         </div>

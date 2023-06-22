@@ -20,17 +20,9 @@ const ProductReducer = (state = initialState, action) => {
             state.products = action.products;
             return state;
 
-    //     case ADD_ITEM:  
-           
-    //         if(!contains(action.item)){
-    //             alert('Товар добавлено в корзину');
-    //             state.items.push(action.item);
-    //         }
-    //         else{
-    //             alert('Товар уже додано у ваш кошик!')
-    //         }
-            
-    //         return state;
+        case ADD_ITEM:  
+            state.products.push(action.product);
+            return state;
     //     case UPDATE_ITEM: 
     //         for(let i=0; i<state.items.length; i++){
     //             if(state.items[i].title === action.changeditem.title){
@@ -49,12 +41,12 @@ const ProductReducer = (state = initialState, action) => {
             return state;
      }
 }
-// export const addItemActionCreator = (itemToAdd) => {
-//     return {
-//         type: ADD_ITEM,
-//         item: itemToAdd
-//     }
-// }
+export const addItemActionCreator = (productToAdd) => {
+    return {
+        type: ADD_ITEM,
+        product: productToAdd
+    }
+}
 // export const updateItemActionCreator = (itemToChange) => {
 //     return {
 //         type: UPDATE_ITEM,
