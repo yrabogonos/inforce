@@ -42,6 +42,8 @@
     button{
         border: none;
         color: white;
+        font-size: 18px;
+        padding: 10px 20px;
     }
    
     .del-yes{
@@ -50,4 +52,11 @@
     .del-no{
         background-color: red;
     }
+}
+.delete-text{
+    font-size: 22px;
+}
+.del-ctrl{
+    width: 100%;
+    justify-content: center;
 }

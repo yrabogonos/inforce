@@ -5,21 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from './StoreContext';
 import store from './Redux/redux-store';
+import { BrowserRouter } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
 
-    <App />
-
-);
 let rerenderDom = () =>{
     root.render(
-        // <BrowserRouter basename='/inforce'> 
+        <BrowserRouter> 
             <Provider store={store}>
                 <App />
             </Provider>
-        // </BrowserRouter>
+        </BrowserRouter>
     
     );
 }

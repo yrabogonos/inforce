@@ -81,7 +81,7 @@ const ModalWindow = (props)=>{
                                 <div className={props.active? "modal-window active" : "modal-window"} onClick={()=>props.setActive(false)}>
                                     <div className="modal-content" onClick={(e)=> e.stopPropagation()}>
                                         <h3>Delete a product</h3>
-                                        <p>Are you sure to delete?</p>
+                                        <p className="text-center delete-text">Are you sure to delete?</p>
                                         <div className="del-ctrl d-flex gap-5">
                                             <button className="del-yes" onClick={()=>{
                                                 store.dispatch(removeItemActionCreator());
@@ -104,57 +104,7 @@ const ModalWindow = (props)=>{
             }
         </StoreContext.Consumer>
     );
-    // switch(props.mode){
-    //     case 'Add':
-    //         return(
-    //             <div className={props.active? "modal-window active" : "modal-window"} onClick={()=>props.setActive(false)}>
-    //                 <div className="modal-content" onClick={(e)=> e.stopPropagation()}>
-    //                     <h3 className="mb-4">Add a product</h3>
-    //                     <div className="product-inputs d-flex flex-column gap-3">
-    //                         <div className="input-item d-flex gap-2 align-center">
-    //                             <label htmlFor="name">Product Name:</label>
-    //                             <input required id="name" type="text" />
-    //                         </div>
-    //                         <div className="input-item d-flex gap-2 align-center">
-    //                             <label htmlFor="count">Product count:</label>
-    //                             <input required id="count" type="number" />
-    //                         </div>
-    //                         <div className="input-item d-flex gap-2 align-center">
-    //                             <label htmlFor="height">Product height:</label>
-    //                             <input required id="height" type="number" />
-    //                         </div>
-    //                         <div className="input-item d-flex gap-2 align-center">
-    //                             <label htmlFor="width">Product width:</label>
-    //                             <input required id="width" type="number" />
-    //                         </div>
-    //                         <div className="input-item d-flex gap-2 align-center">
-    //                             <label htmlFor="weight">Product weight:</label>
-    //                             <input required id="weight" type="number" />
-    //                         </div>
-    //                         <div className="controls d-flex gap-4">
-    //                             <button className="btn-confirm">Confirm</button>
-    //                             <button className="btn-cancel" onClick={()=>{
-    //                                 props.setActive(false);
-                              
-    //                             }}>Cancel</button>
-    //                         </div>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         );
-    //     case 'Delete':
-    //         return(
-    //             <div className={props.active? "modal-window active" : "modal-window"} onClick={()=>props.setActive(false)}>
-    //                 <div className="modal-content" onClick={(e)=> e.stopPropagation()}>
-    //                     <h3>Delete a product</h3>
-    //                 </div>
-    //             </div>
-    //         );
-    //     default:
-    //         return;
-    // }
-
-    
+   
    
 }
 

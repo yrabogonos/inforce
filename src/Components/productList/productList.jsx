@@ -20,7 +20,7 @@ const ProductList = function (props){
                         <div className="productlist-wrap">
                             <h2 className='mb-4 text-center'>Product List:</h2>
                             <div className="product-ctrls d-flex flex-column">
-                                <button className="add-product" onClick={()=>{
+                                <button className="add-product mb-3" onClick={()=>{
                                     props.openModal(true);
                                     props.setMode('Add');
                                 }}>Add product</button>

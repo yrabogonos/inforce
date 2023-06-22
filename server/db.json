@@ -35,14 +35,14 @@
     },
     {
       "imageUrl": "https://bioritmefestival.org/wp-content/uploads/2017/11/img-test-300x300.png",
-      "name": "Test2",
-      "count": "1",
+      "name": "Test3",
+      "count": "4",
       "size": {
-        "width": "1",
-        "height": "1"
+        "width": "4",
+        "height": "4"
       },
-      "Weight": "1",
-      "id": 5
+      "Weight": "5",
+      "id": 6
     }
   ],
   "comments": [
