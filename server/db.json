@@ -24,17 +24,6 @@
     },
     {
       "imageUrl": "https://bioritmefestival.org/wp-content/uploads/2017/11/img-test-300x300.png",
-      "name": "Product name2",
-      "count": 4,
-      "size": {
-        "width": 200,
-        "height": 200
-      },
-      "Weight": "200g",
-      "id": 3
-    },
-    {
-      "imageUrl": "https://bioritmefestival.org/wp-content/uploads/2017/11/img-test-300x300.png",
       "name": "Test1",
       "count": "2",
       "size": {

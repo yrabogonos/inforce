@@ -24,14 +24,11 @@ const ProductList = function (props){
                                     props.openModal(true);
                                     props.setMode('Add');
                                 }}>Add product</button>
-                                <button className="del-product" onClick={()=>{
-                                    props.openModal(true);
-                                    props.setMode('Delete');
-                                }}>Delete product</button>
+                               
                             </div>
                             <div className="products-container d-flex">
                                 
-                                {products.map(product => <Product data={product}/>)}
+                                {products.map(product => <Product openModal = {props.openModal} setMode = {props.setMode}data={product}/>)}
                             </div>
                         </div>
                 </section>

@@ -1,7 +1,8 @@
 const ADD_ITEM = 'ADD-ITEM';
-const UPDATE_ITEM = 'UPDATE-ITEM';
 const REM_ITEM = 'REM_ITEM';
-const REM_ALL = 'REM_ALL';
+const LOAD_TO_DEL =  'LOAD-TO-DEL';
+const CLEAR_LOAD_TO_DEL = 'CLEAR-LOAD-TO-DEL';
+
 
 const SET_INITIAL_STATE = 'SET_INITIAL_STATE';
 
@@ -9,6 +10,7 @@ let initialState =  {
     products:[
         
     ],
+    idToDelete: NaN,
 }
 
 
@@ -23,20 +25,18 @@ const ProductReducer = (state = initialState, action) => {
         case ADD_ITEM:  
             state.products.push(action.product);
             return state;
-    //     case UPDATE_ITEM: 
-    //         for(let i=0; i<state.items.length; i++){
-    //             if(state.items[i].title === action.changeditem.title){
-    //                 state.items[i] = action.changeditem;
-    //             }
-    //         }
-    //         return state;
-    //     case REM_ITEM:
-    //         state.items = state.items.filter(item => item.title!=action.delItem.title);
-    //         return state;
 
-    //     case REM_ALL:
-    //         state.items = [];
-    //         return state;
+        case REM_ITEM:
+            state.products = state.products.filter(item => item.id!=state.idToDelete);
+            return state;
+        case LOAD_TO_DEL:
+            console.log(state);
+            state.idToDelete = action.id;
+            return state;
+        case CLEAR_LOAD_TO_DEL:
+            console.log(state);
+            state.idToDelete = NaN;
+            return state;
         default:
             return state;
      }
@@ -47,28 +47,30 @@ export const addItemActionCreator = (productToAdd) => {
         product: productToAdd
     }
 }
-// export const updateItemActionCreator = (itemToChange) => {
-//     return {
-//         type: UPDATE_ITEM,
-//         changeditem: itemToChange
-//     }
-// }
-// export const removeItemActionCreator = (itemToDell) => {
-//     return {
-//         type: REM_ITEM,
-//         delItem: itemToDell
-//     }
-// }
-// export const removeAllActionCreator = () => {
-//     return {
-//         type: REM_ALL
-//     }
-// }
+
+export const removeItemActionCreator = () => {
+    return {
+        type: REM_ITEM,
+     
+    }
+}
+
 
 export const setInitialState = initialState => {
     return {
       type: SET_INITIAL_STATE,
       products: initialState
+    };
+};
+export const loadToDeleteActionCreator = (id) => {
+    return {
+      type: LOAD_TO_DEL,
+      id: id
+    };
+};
+export const clearLoadToDeleteActionCreator = () => {
+    return {
+      type: CLEAR_LOAD_TO_DEL,
     };
 };
 

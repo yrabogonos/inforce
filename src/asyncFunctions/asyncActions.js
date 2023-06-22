@@ -28,4 +28,16 @@ export const postData = async (data) => {
     } catch (error) {
       console.error('Error adding object:', error);
     }
+};
+export const deleteData = async (id) => {
+    try {
+      const response = await fetch(`http://localhost:3001/products/${id}`, {
+        method: 'DELETE',
+      });
+      const responseData = await response.json();
+      console.log('Object deleted successfully:', responseData);
+    } catch (error) {
+      console.error('Error deleting object:', error);
+    }
   };
+  

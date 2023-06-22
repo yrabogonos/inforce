@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import './modal.scss';
 import StoreContext from "../../StoreContext";
-import { addItemActionCreator } from "../../Redux/products_reducer";
-import { postData } from "../../asyncFunctions/asyncActions";
+import { addItemActionCreator, clearLoadToDeleteActionCreator, removeItemActionCreator } from "../../Redux/products_reducer";
+import { deleteData, postData } from "../../asyncFunctions/asyncActions";
 
 
 const ModalWindow = (props)=>{
@@ -81,6 +81,18 @@ const ModalWindow = (props)=>{
                                 <div className={props.active? "modal-window active" : "modal-window"} onClick={()=>props.setActive(false)}>
                                     <div className="modal-content" onClick={(e)=> e.stopPropagation()}>
                                         <h3>Delete a product</h3>
+                                        <p>Are you sure to delete?</p>
+                                        <div className="del-ctrl d-flex gap-5">
+                                            <button className="del-yes" onClick={()=>{
+                                                store.dispatch(removeItemActionCreator());
+                                                props.setActive(false);
+                                                deleteData(state.products.idToDelete);
+                                            }}>Yes</button>
+                                            <button className="del-no" onClick={()=>{
+                                                store.dispatch(clearLoadToDeleteActionCreator());
+                                                props.setActive(false);
+                                            }}>No</button>
+                                        </div>
                                     </div>
                                 </div>
                             );
